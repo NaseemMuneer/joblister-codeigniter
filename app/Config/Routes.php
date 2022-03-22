@@ -31,8 +31,20 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+
+$routes->get('/', 'JobController::index');
+$routes->get('/home/(:num)', 'JobController::index/$1');
 $routes->post('/insert', 'UsersController::insertUser');
+$routes->add('/create-job', 'JobController::create_job');
+$routes->add('/view-job/(:num)', 'JobController::view_job/$1');
+$routes->get('/edit-job/(:num)', 'JobController::edit_job/$1');
+$routes->post('/store', 'JobController::store');
+$routes->post('/update/(:num)', 'JobController::update/$1');
+$routes->post('/delete-job/(:num)', 'JobController::delete/$1');
+$routes->get('/search', 'JobController::search');
+// $routes->get('/store', 'JobController::store');
+
+// $routes->get('/delete-job/(:num)', 'JobController::delete_job/$1');
 
 /*
  * --------------------------------------------------------------------

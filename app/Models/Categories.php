@@ -4,11 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UsersModel extends Model
+class Categories extends Model
 {
-
-    protected $table            = 'users';
-    protected $allowedFields    = ['username', 'full_name'];
+    protected $table = 'categories';
+    protected $allowedFields = [''];
 
     // Dates
     protected $useTimestamps = false;

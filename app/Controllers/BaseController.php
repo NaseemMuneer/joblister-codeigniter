@@ -29,6 +29,7 @@ class BaseController extends Controller
      */
     protected $request;
     protected $db;
+    protected $validation;
 
     /**
      * An array of helpers to be loaded automatically upon
